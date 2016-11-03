@@ -1,4 +1,4 @@
-# beatsui
+# atomweb
 
 This is the code for public website of atom-project. 
 
@@ -10,7 +10,6 @@ Install [polymer-cli](https://github.com/Polymer/polymer-cli):
 (Need at least npm v6.0)
 
     npm install -g polymer-cli
-
 
 ##### Setup
     bower install
