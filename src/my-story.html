@@ -1,0 +1,112 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="my-story">
+
+	<template>
+
+		<style>
+			:host {
+				display: block;
+				padding: 10px;
+				text-align: center;
+			}
+			
+			div {
+				width: 700px;
+				font-size: 24px;
+				font-weight: 300;
+				text-align: left;
+				margin: auto;
+				padding: 45px 0;
+				line-height: 40px;
+				opacity: 0.87;
+			}
+			
+			h1 {
+				padding-top: 20px;
+				line-height: 60px;
+			}
+			
+			h2 {
+				padding-top: 10px;
+				line-height: 40px;
+			}
+			
+			h1,
+			h2 {
+				opacity: 0.87;
+			}
+			
+			@media (max-width: 1024px) {
+				div {
+					width: 80%;
+				}
+			}
+		</style>
+
+		<div>
+			<h1>A long time ago in a galaxy far, far away….</h1>
+
+
+			<h2>Chapter 1. Humble Beginnings</h2>
+			<p>An epic battle raged between UX designers and front-end developers. There was constant tension since the developers demanded
+				frozen specs and interoperable frameworks while the designers needed to keep evolving products based on user testing
+				and new learnings. While agile methodologies provided some relief, the hunt was on for a new kind of technology. One
+				that could broker peace between these clans by helping to streamline UI development and maintenance workflow…
+			</p>
+
+			<h2>Chapter 2. Era of Exploration</h2>
+			<p>Meanwhile, a new force called web components was maturing which promised powers like being able to create custom html
+				elements that could encapsulate styles and functionality. As these designers and developers started exploring this technology,
+				they realised its revolutionary potential. Living style guides took on a whole new meaning and significant improvement
+				was made in their component driven UI workflow…
+			</p>
+			<h2>Chapter 3. Using the Force</h2>
+			<p>The component driven development challenge was now solved to a great degree. However, a group of inspired Jedi weren’t
+				satisfied yet and wondered what more they could achieve using this force. So they started applying thought towards streamlining
+				and automating processes of putting components together to create interface pieces like forms and pages. They also wanted
+				to leverage dynamic data from external sources in the interfaces that were being prototyped using tools they created…
+			</p>
+			<h2>Chapter 4. Empowering the galaxy</h2>
+			<p>As these Jedi experienced the power of using the force, they felt that its true impact would be realised if they could
+				empower a much larger set of people to use the web component force and meaningfully benefit from it. They started developing
+				ideas around democratising the process of creation by providing easy tools to make powerful technology accessible to
+				people outside the developer &amp; tech community as well. Hence effort started concentrating on making these prototyping
+				tools delightfully usable by people with basic skills, e.g. those who could use productivity software like google mail
+				or docs…
+			</p>
+			<h2>Chapter 5. Today (the atom project)</h2>
+			<p>
+				The result of these endeavours is the atom project.
+			</p>
+			<h2>
+				Chapter 6. The Future</h2>
+			<p>
+				Our community continues to grow, and our story gets more interesting with your love, support and contributions. We are always
+				experimenting with newer ideas while remaining focussed towards our vision.
+			</p>
+		</div>
+
+	</template>
+
+	<script>
+
+    Polymer({
+
+      is: 'my-story'
+
+    });
+
+  </script>
+
+</dom-module>

@@ -1,0 +1,130 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="my-about">
+
+	<template>
+
+		<style>
+			:host {
+				display: block;
+				padding: 10px;
+				text-align: center;
+			}
+			
+			div {
+				width: 700px;
+				font-size: 24px;
+				font-weight: 300;
+				text-align: left;
+				margin: auto;
+				padding: 45px 0;
+				line-height: 40px;
+				opacity: 0.87;
+			}
+			
+			h1 {
+				padding-top: 20px;
+			}
+			
+			h2 {
+				padding-top: 10px;
+			}
+			
+			h1,
+			h2 {
+				opacity: 0.87;
+				line-height: 40px;
+			}
+			
+			@media (max-width: 1024px) {
+				div {
+					width: 80%;
+				}
+			}
+		</style>
+
+		<div>
+
+			<h2>Intro</h2>
+
+			<p>atom project is an open-source set of elements and builders, aimed at making web app development fast and simple. It can
+				be used by designers, developers or people who want to DIY a web app. It is based on open standards which means that
+				it will work with practically any framework, language or platform of choice.</p>
+
+			<p>By having elements and builders we implicitly suggest a workflow — one that we have found works well for us. However it
+				is important to mention at the outset that we realise not everyones workflow may be similar and our architecture accommodates
+				for this. </p>
+			<h2>Motivations for this project</h2>
+
+			<p>We wanted an easier way to create web applications that was fast and did not need specialised skills. We wanted the best
+				app creation experience. We also wanted the approach to be standards compliant so that it evolves with the web, and be
+				open-source so that the community benefits and contributes to it.</p>
+
+			<h1>What is atom?</h1>
+			<h2>What all are we looking at here?</h2>
+
+			<p>atom has a set of elements which are web components built with polymer.</p>
+
+			<ul>
+				<li>There are elements for building simple forms, displaying structured data (like tables &amp; lists), and creating typical
+					web pages.</li>
+				<li>There are elements with no UI which take care of some functional aspects (like sorting/ fetching/ sending data).</li>
+				<li>There is a provision for you to easily add your own or modify an existing element to suit your needs.</li>
+			</ul>
+			<p>atom also has a set of builders (or tools) that ease app creation.</p>
+
+			<ul>
+				<li>Form Builder</li>
+				<li>Page Builder</li>
+				<li>Data Source Builder/ API Calling Interface</li>
+			</ul>
+
+			<h2>What is an atom element?</h2>
+
+			<p>Each atom element is a web component ready to use in a drag and drop builder. The elements are well documented in terms
+				of their design considerations, developer documentation and availability of demos. Each element also comes with unit
+				test cases, performance numbers, and capability to work well with analytics. They are carefully tested to work across
+				browsers and devices (as per published spec.) and have user experience heuristics built into them.</p>
+
+			<h2>What are builders and why have them?</h2>
+
+			<p>Builders are tools used to speed up parts of web application development. They also make web app development possible
+				for non developers by lowering the barrier to entry.</p>
+
+			<p>atom builders are tools focussed on providing the worlds best user experience for creating parts of web applications like
+				forms, pages, connections with data. They empower people to easily work with complex or mundane activities without having
+				to master aspects of programming or do repetitive work.</p>
+
+			<p>They streamline workflow and open up possibilities for automation of the creation process.</p>
+			<h2>How do the various atom builders work with each other?</h2>
+
+			<p>All forms created using the form builder are available as elements to drag and drop onto pages. Similarly, all data sources
+				created using the data source builder are available as elements for point and click integration with other UI elements
+				in the page builder. Data sources created using the data source builder can also be used by a developer as a non UI element
+				while writing code.</p>
+
+		</div>
+
+	</template>
+
+	<script>
+
+    Polymer({
+
+      is: 'my-about'
+
+    });
+
+  </script>
+
+</dom-module>

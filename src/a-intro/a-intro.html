@@ -1,0 +1,115 @@
+<link rel="import" href="../elements.html">
+
+<dom-module id="a-intro">
+
+	<template>
+		<style include="app-grid-style">
+			:host {
+				--intro-background-color: black;
+				--app-grid-columns: 4;
+				--app-grid-gutter: 20px;
+				--app-grid-expandible-item-columns: 2;
+			}
+			
+			section {
+				margin-top: 0;
+				background-color: var(--intro-background-color);
+				color: #fff;
+				font-weight: 300;
+				padding: 40px 0;
+			}
+			
+			h2 {
+				text-align: center;
+				font-size: 60px;
+				font-weight: 300;
+				margin:0;
+				padding-top:40px;
+			}
+			
+			p,
+			ul {
+				font-size: 24px;
+				list-style-type: none;
+			}
+			
+			.main h2 {
+				color: #FFCA3B;
+				margin:0;
+			}
+			
+			em {
+				font-weight: bold;
+				font-style: normal;
+			}
+			
+			@media (max-width: 1024px) {
+				section {
+					text-align: center;
+				}
+				.app-grid div {
+					@apply(--app-grid-expandible-item);
+					text-align: left;
+				}
+			}
+			
+			@media (max-width: 640px) {
+				ul {
+					text-align: left;
+				}
+			}
+		</style>
+
+		<section>
+			<h2>Quick Introduction</h2>
+			<div class$="{{_getMainClass(narrowLayout)}} main">
+				<div>
+					<h2>WHAT</h2>
+					<p><em>Open-source tooling</em> to work with the web component ecosystem.</p>
+					<p>Interactive exploration of &amp; creation with any web component.</p>
+					<p>Enabling creation of forms, pages, data sources, emails, logic, etc.</p>
+				</div>
+				<div>
+					<h2>WHY</h2>
+					<p>Enable the creation of meaningful <em>data-leveraging, real-world-result-producing prototypes</em> in manner that is
+						-
+					</p>
+					<ul>
+						<li>- easy &amp; quick</li>
+						<li>- robust &amp; accessible</li>
+						<li>- free &amp; fun</li>
+						<li>- community driven</li>
+					</ul>
+				</div>
+				<div>
+					<h2>WHO</h2>
+					<p>This project is by and for <em>designers, developers</em>, DIY enthusiasts, <em>students, educators</em> and all kinds
+						of makers.</p>
+					<p>People who like to build things in this age of design thinking, IOT &amp; AI where the medium isn’t just pixels but
+						data &amp; emotions.</p>
+				</div>
+				<div>
+					<h2>HOW</h2>
+					<p>By building on top of web <em>standards</em>, being <em>open</em> and <em>integrating</em> with other web based tools.</p>
+					<p>We believe that there are tools which best fit use cases and aim to provide a toolkit so that makers like you can use
+						the right tools for the right job. </p>
+				</div>
+			</div>
+		</section>
+		<iron-media-query query="max-width: 640px" query-matches="{{narrowLayout}}"></iron-media-query>
+	</template>
+	<script>
+
+    Polymer({
+      is: 'a-intro',
+      _getMainClass:function(narrowLayout){
+		  if(narrowLayout){
+			  return "";
+		  }
+		  return "app-grid";
+	  }
+    });
+
+  </script>
+
+</dom-module>

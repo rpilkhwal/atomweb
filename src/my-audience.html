@@ -1,0 +1,121 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="my-audience">
+
+	<template>
+
+		<style>
+			:host {
+				display: block;
+				padding: 10px;
+				text-align: center;
+			}
+			
+			div {
+				width: 700px;
+				font-size: 24px;
+				font-weight: 300;
+				text-align: left;
+				margin: auto;
+				padding: 45px 0;
+				line-height: 40px;
+				opacity: 0.87;
+				min-height: 500px;
+			}
+			
+			h1 {
+				padding-top: 20px;
+				line-height: 60px;
+			}
+			
+			h2 {
+				padding-top: 10px;
+				line-height: 40px;
+			}
+			
+			h1,
+			h2 {
+				opacity: 0.87;
+			}
+			
+			a {
+				color: inherit;
+			}
+			
+			@media (max-width: 1024px) {
+				div {
+					width: 80%;
+				}
+			}
+		</style>
+
+		<div>
+			<h2> Designers
+			</h2>
+			<p>Visual Designers. UX Designers. UI Designers. Interaction Designers. Web Designers… (you get the idea). Designers can
+				use tools provided by the atom project to create functional prototypes, that can be handed over to development teams
+				for taking to production.
+			</p>
+			<p>Most experienced designers have their own component libraries, or prefer using some. Most beginners benefit from using
+				component libraries (like bootstrap, polymer, telerik).
+			</p>
+			<p> As the web components revolution gets more traction, libraries of web components will rise. The atom project tools let
+				designers work with any of these web components or their own to create prototypes.
+				<p><i> (Side note: Currently our tools don’t support “Hi-Fidelity” prototyping in a way that
+				most people use the term. So you can’t animate objects with cool effects, but you can populate a responsive data grid
+				with real data from a url or API.)</i></p>
+			</p>
+
+			<h2>Developers
+			</h2>
+			<p>In our interviews with several developers we see a common theme emerging — prototyping tools don’t output code that is
+				usable by a developer. Thats why we have carefully crafted the developer experience for the atom project tools and infrastructure.
+				For all building blocks used in prototyping, we leverage the web component spec. Our tools take care of integrating with
+				popular build systems and package managers. All output coming from our prototyping tools is HTML so you can work with
+				it the way you want. Since our tooling is open-source, you can tweak it to get the type of output markup that you need.
+				We try to create our tools in a way that even after developers start working with the code, when the designers need to
+				make small edits using the prototyping interface, they are able to do so.
+			</p>
+
+			<h2>Students
+			</h2>
+			<p>We are very excited to work with students, from disciplines like engineering and design. (We welcome students from other
+				disciplines as well). The atom project tools enable students to craft their ideas into meaningful working prototypes
+				in a few minutes. We are working with student communities to create examples of use cases to demonstrate how many undergraduate
+				final year projects can be built in an hour or less. The idea is to provide students with tools to rapidly experiment
+				with data, statistical models, information visualisations, connected devices, the physical web, IOT, user interfaces
+				and experiences.
+			</p>
+
+			<h2>Educators</h2>
+
+			<p>The tools that the atom project provides to your students are the same that industry professionals are using for large
+				and complex projects. This helps create early exposure and get students industry ready. We want to help reduce the industry-academia
+				gap. We are thrilled to work with your school or university. We can come in and organise an interactive hands-on session
+				for students or have them visit a professional environment. Students can see the atom project tools in action, learn
+				about the power of prototyping and get introduced to the world of progressive web apps.</p>
+		</div>
+
+	</template>
+
+	<script>
+
+    Polymer({
+
+      is: 'my-audience'
+
+    });
+
+  </script>
+
+</dom-module>

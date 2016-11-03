@@ -1,0 +1,96 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="my-vision">
+
+	<template>
+
+		<style>
+			:host {
+				display: block;
+				padding: 10px;
+				text-align: center;
+			}
+			
+			div {
+				width: 700px;
+				font-size: 24px;
+				font-weight: 300;
+				text-align: left;
+				margin: auto;
+				padding: 45px 0;
+				line-height: 40px;
+				opacity: 0.87;
+				min-height: 500px;
+			}
+			
+			h1 {
+				padding-top: 20px;
+				line-height: 60px;
+			}
+			
+			h2 {
+				padding-top: 10px;
+				line-height: 40px;
+			}
+			
+			h1,
+			h2 {
+				opacity: 0.87;
+			}
+			
+			a{
+				color:inherit;				
+			}
+			@media (max-width: 1024px) {
+				div {
+					width: 80%;
+				}
+			}
+		</style>
+
+		<div>
+			<h1>Democratize creation.</h1>
+			<h2>Human</h2>
+
+			<p>Empower people to become creators rather than just consumers. Of technology, and all the benefits and possibilities that
+				it enables.</p>
+
+			<p>A lot of people have ideas about how to solve everyday problems using technology, but are limited because complexities
+				of implementation get in the way. We aim to abstract that complexity away so that people can focus on solving problems.</p>
+
+			<p>We use the term ‘solving problems’ in a broad sense. It could mean things like <a href="http://opendatatoolkit.worldbank.org/en/essentials.html" target="__blank">create awareness</a>, <a href="http://androidforacademics.com/attendance/" target="__blank">ask questions</a>, <a href="http://datajournalismhandbook.org/1.0/en/in_the_newsroom_1.html" target="__blank">tell stories</a>,
+				<a href="http://economictimes.indiatimes.com/tech/hardware/indian-students-create-earphones-that-can-detect-pain-send-sos/articleshow/55149758.cms" target="__blank">solve problems</a>. </p>
+			<h2>Machine</h2>
+
+			<p>The future lies in <a href="https://www.technologyreview.com/s/523666/software-that-augments-human-thinking/" target="__blank">human machine symbiosis</a> and <a href="https://www.youtube.com/watch?v=tgVdr_W-7Wo" target="__blank">democratising the process of creation</a>.</p>
+
+			<p>It also lies in automating creation of forms, pages, <a href="https://thegrid.io/" target="__blank">sites</a>, data sources, apps and much more.</p>
+
+			<p>Design thinking and co-creation today are about working with other people to generate, improve and implement ideas. In
+				the future it will be about working with people and AI to co-create. We will need tools which allow, nay, advance such
+				interactions.</p>
+		</div>
+
+	</template>
+
+	<script>
+
+    Polymer({
+
+      is: 'my-vision'
+
+    });
+
+  </script>
+
+</dom-module>

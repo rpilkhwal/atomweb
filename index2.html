@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="atom-project - open source web component based builders, tools and componentes for easy progressive web app development">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+	<title>Welcome to atom-project</title>
+	<link rel="shortcut icon" sizes="32x32" href="/images/favicon.ico">
+	<meta name="theme-color" content="#07C5F2">
+	<link rel="manifest" href="/manifest.json">
+
+	<script>
+    // setup Polymer options
+    window.Polymer = {lazyRegister: true, dom: 'shadow'};
+
+    // load webcomponents polyfills
+    (function() {
+      if ('registerElement' in document
+          && 'import' in document.createElement('link')
+          && 'content' in document.createElement('template')) {
+        // browser has web components
+      } else {
+        // polyfill web components
+        var e = document.createElement('script');
+        e.src = '/bower_components/webcomponentsjs/webcomponents-lite.min.js';
+        document.head.appendChild(e);
+      }
+    })();
+
+    // load pre-caching service worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
+
+  </script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link rel="import" href="bower_components/t-carousel/t-carousel.html">
+	<link rel="import" href="bower_components/iron-image/iron-image.html">
+
+	<style>
+		:host {
+			font-family: lato;
+		}
+		
+		.carousel {
+			background-color: #37346D;
+			padding: 50px 20px 0;
+		}
+		
+		.imgDiv {
+			height: 600px;
+			padding: 0 30px;
+		}
+		
+		.imgDiv {
+			iron-image {
+				--iron-image-width: 600px;
+			}
+		}
+		
+		iron-image {
+			width: 100%;
+			height: 600px;
+		}
+		
+		.imgDiv div {
+			position: absolute;
+			bottom: 0;
+			background: #37346D;
+			color: white;
+			padding: 20px;
+			text-align: center;
+			left: auto;
+			width: 95%;
+			opacity: 0.8;
+		}
+		
+		t-carousel {
+			--grey-two: #fff;
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<section id="features" class="carousel">
+		<t-carousel auto-setup-carousel="true" continuous="true">
+			<div class="imgDiv">
+				<iron-image sizing="cover" src="/images/gal/1.jpg" preload></iron-image>
+				<div>Crisp Clear Interface - Clear areas for search criteria, products, and itinerary. The itinerary you see here is exactly
+					how the emails look.
+				</div>
+			</div>
+			<div class="imgDiv">
+				<iron-image sizing="cover" src="/images/gal/2.jpg" preload></iron-image>
+				<div>Powerful Product Listing - Support for deals, category tags, custom product types. Powerful flexible options are built-in
+					without compromising on ease of use.
+				</div>
+			</div>
+		</t-carousel>
+	</section>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="my-philosophy">
+
+	<template>
+
+		<style>
+			:host {
+				display: block;
+				padding: 10px;
+				text-align: center;
+			}
+			
+			div {
+				width: 700px;
+				font-size: 24px;
+				font-weight: 300;
+				text-align: left;
+				margin: auto;
+				padding: 45px 0;
+				line-height: 40px;
+				opacity: 0.87;
+				min-height: 500px;
+			}
+			
+			h1 {
+				padding-top: 20px;
+				line-height: 60px;
+			}
+			
+			h2 {
+				padding-top: 10px;
+				line-height: 40px;
+			}
+			
+			h1,
+			h2 {
+				opacity: 0.87;
+			}
+			
+			a {
+				color: inherit;
+			}
+			
+			@media (max-width: 1024px) {
+				div {
+					width: 80%;
+				}
+			}
+		</style>
+
+		<div>
+			<p>We believe that by breaking down the various dimensions of modern web applications, we can arrive at a set of different
+				aspects, each of which a dedicated tool can help to work with.</p>
+
+			<h2>Aspect 1: User input</h2>
+
+			<p>For instance, most applications require user input. More often than not, this input is captured using a form. People with
+				web development experience know that creating good forms is no trivial task. Hence, having a dedicated tool like a form
+				builder to expedite and ease the process of creating good forms seems like a good idea. </p>
+
+			<p> <i>(Side note: Think about creating hundreds of forms containing thousands of form elements across your applications. Also
+				think about the possibility of not spending a single developer minute on tasks that business analysts or designers can
+				tackle without coding— like creating form front ends and basic logic.)
+			</i></p>
+			<p>
+				<i>(Caveat: Some experienced web developers may like to work free from constraining frameworks. We get that. However, they
+				still work with some rules of their own; and an open-source form builder lets them modify the rules and the kind of markup
+				that the form builder outputs.)</i>
+			</p>
+			<h2>Aspect 2: Output to the user (or data display)</h2>
+
+			<p>Every site or application has one or more pages where data is displayed for users to view and consume or interact with.
+				Most applications have simple layouts to display items on a page. We place elements side by side and one below the other
+				(think dashboard, report, landing page). On mobile devices, all elements stack one below the other. Of course, this is
+				an oversimplification, but it is good enough for most cases. Hence, similar to the form builder example, having a dedicated
+				tool like a page builder to place objects on a page would seem useful.</p>
+
+			<p>
+				<i>
+				(Side note: Apps driven by voice based UIs may not have “pages”. Similarly, as newer forms of interaction gain adoption,
+				reliance on traditional forms may reduce. e.g. think how mass adoption of brain computer interfaces may affect your apps.
+				But for the foreseeable future, page based metaphors for information display are here to stay.)
+			</i></p>
+			<p>
+				<i>	 (Caveat: Page builder
+				is not to be confused with widget builder. It is not intended to be used as a freeform design tool. Its purpose is simply
+				to place and rearrange high-level blocks on a page. This keeps the tool’s usage simple and doesn’t overload it.)
+				</i>
+			</p>
+		</div>
+
+	</template>
+
+	<script>
+
+    Polymer({
+
+      is: 'my-philosophy'
+
+    });
+
+  </script>
+
+</dom-module>

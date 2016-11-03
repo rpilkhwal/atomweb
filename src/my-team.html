@@ -1,0 +1,90 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="my-team">
+
+	<template>
+
+		<style>
+			:host {
+				display: block;
+				padding: 10px;
+				text-align: center;
+			}
+			
+			div {
+				width: 700px;
+				font-size: 24px;
+				font-weight: 300;
+				text-align: left;
+				margin: auto;
+				padding: 45px 0;
+				line-height: 40px;
+				opacity: 0.87;
+			}
+			
+			h1 {
+				padding-top: 20px;
+				line-height: 60px;
+			}
+			
+			h2 {
+				padding-top: 10px;
+				line-height: 40px;
+			}
+			
+			h1,
+			h2 {
+				opacity: 0.87;
+			}
+			
+			ul {
+				text-align: left;
+			}
+			
+			@media (max-width: 1024px) {
+				div {
+					width: 80%;
+				}
+			}
+		</style>
+		<div>
+			<ul>
+				<li>Abhilekh Kumar (QA Engineer)</li>
+				<li>Ajinkya Tejankar (Developer)</li>
+				<li>Amol Hadkar (Visual Designer)</li>
+				<li>Ganesh Ratnaparkhi (Developer)</li>
+				<li>Manoj Chalode (Developer)</li>
+				<li>Mira Irani (Communications Manager)</li>
+				<li>Paritosh Chhibber (Interaction Designer)</li>
+				<li>Rahul Pilkhwal (Technology Mentor)</li>
+				<li>Sounak Pal (Front End Developer)</li>
+			</ul>
+
+			<h2>Alumini</h2>
+			<ul>
+				<li>Shailesh Srivastava (Developer)</li>
+			</ul>
+		</div>
+	</template>
+
+	<script>
+
+    Polymer({
+
+      is: 'my-team'
+
+    });
+
+  </script>
+
+</dom-module>

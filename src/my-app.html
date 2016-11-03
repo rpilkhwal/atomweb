@@ -1,0 +1,311 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/app-route/app-location.html">
+<link rel="import" href="../bower_components/app-route/app-route.html">
+<link rel="import" href="../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
+<link rel="import" href="../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="a-footer/a-footer.html">
+
+<dom-module id="my-app">
+
+	<template>
+
+		<style include="iron-flex iron-flex-alignment iron-flex-factors">
+			:host {
+				font-family: open sans;
+				--header-background-color: #07c5f2;
+			}
+			
+			app-toolbar {
+				/* Toolbar is the main header, so give it some color */
+				background-color: var(--header-background-color);
+				color: white;
+				--app-toolbar-font-size: 24px;
+			}
+			
+			app-header {
+				background-color: var(--header-background-color);
+			}
+			
+			.logo {
+				padding-top: 10px;
+			}
+			
+			.logo a,
+			.llogo a {
+				text-decoration: none;
+			}
+			
+			.link {
+				@apply(--layout-horizontal);
+				@apply(--layout-center-center);
+			}
+			
+			.link {
+				text-decoration: none;
+				color: #FFF;
+				font-size: 24px;
+				font-weight: lighter;
+			}
+			
+			.tmenu {
+				background-color: #9edee1;
+			}
+			
+			.lmenu {
+				border-top: 1px solid #0D111A;
+			}
+			
+			section {
+				margin-top: -65px;
+				padding-top: 65px;
+			}
+			
+			.sel a {
+				/*color: #37346D;*/
+				font-weight: bold;
+			}
+			
+			.signup {
+				text-align: right;
+				align-self: inherit;
+			}
+			
+			.signup a {
+				text-decoration: none;
+			}
+			
+			.signup paper-button {
+				background-color: white;
+				color: var(--header-background-color);
+				height: 40px;
+				font-size: 15px;
+			}
+			
+			.btnMore {
+				background-color: #00CEF3;
+				color: white;
+				width: 100px;
+			}
+			
+			.section {
+				margin-top: -65px;
+				padding-top: 65px;
+			}
+			
+			.menu {
+				align-items: center;
+			}
+			
+			.topmenu {
+				width: 400px;
+				font-size: 20px;
+			}
+			
+			#drawer {
+				--app-drawer-content-container: {
+					background-color: var(--header-background-color);
+				}
+			}
+			
+			.lmenu paper-menu {
+				background-color: var(--header-background-color);
+				;
+			}
+			
+			.lmenu paper-item {
+				--paper-item-focused: {
+					background: var(--header-background-color);
+					font-weight: bold;
+				}
+				;
+				--paper-item-focused-before: {
+					opacity: 0;
+				}
+				;
+			}
+			
+			.llink {
+				text-decoration: none;
+				color: #FFF;
+				border-bottom: 1px solid #4f4aa0;
+			}
+			
+			.llink paper-item {
+				font-size: 24px;
+				font-family: open sans;
+				font-weight: 300;
+			}
+			
+			.lsel paper-item {
+				font-weight: bold;
+			}
+			
+			.logoImg {
+				height: 40px;
+			}
+			
+			app-toolbar[hidden] {
+				display: none;
+			}
+			
+			@media (max-width: 1024px) {
+				.logoImg {
+					height: 30px;
+				}
+			}
+			
+			@media (max-width: 640px) {}
+		</style>
+
+		<app-location route="{{route}}"></app-location>
+		<app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}"></app-route>
+
+		<app-drawer-layout force-narrow>
+			<app-drawer id="drawer">
+				<app-toolbar class="llogo">
+					<div class="horizontal layout flex">
+						<div>
+							<a href="/"><img class="logoImg" src="/images/logo.png" /></a>
+						</div>
+					</div>
+				</app-toolbar>
+				<!--side bar menu-->
+				<div class="lmenu">
+					<paper-menu noink selected-class="lsel" selected="{{selected}}">
+						<a href="/about" class="llink" tabindex="-1">
+							<paper-item>About</paper-item>
+						</a>
+						<a href="/story" class="llink" tabindex="-1">
+							<paper-item>Story</paper-item>
+						</a>
+						<a href="/vision" class="llink" tabindex="-1">
+							<paper-item>Vision</paper-item>
+						</a>
+						<a href="/team" class="llink" tabindex="-1">
+							<paper-item>Team</paper-item>
+						</a>
+					</paper-menu>
+				</div>
+			</app-drawer>
+			<app-header-layout>
+				<app-header fixed class="main-header">
+					<app-toolbar class="at" hidden$="{{wideLayout}}">
+						<div class="horizontal layout flex menu">
+							<paper-icon-button class="menu-button1" icon="menu" drawer-toggle></paper-icon-button>
+							<a href="/"><img class="logoImg" src="/images/logo.png" /></a>
+							<div class="flex-5 signup">
+								<a href$="[[signUpUrl]]" target="_blank">
+									<paper-button id="btnSignup" raised>GET INVOLVED</paper-button>
+								</a>
+							</div>
+						</div>
+					</app-toolbar>
+					<app-toolbar class="at tabs-bar" hidden$="{{!wideLayout}}">
+						<div class="horizontal layout flex">
+							<div class="flex-2 llogo">
+								<a href="/"><img class="logoImg" src="/images/logo.png" /></a>
+							</div>
+							<div class="flex"></div>
+							<div class="flex-1">
+								<paper-tabs class="topmenu" selected="{{selected}}" no-bar="true" noink="true" flex selected-class="sel">
+									<paper-tab link>
+										<a href="/about" class="link" tabindex="-1">About</a>
+									</paper-tab>
+									<paper-tab link>
+										<a href="/story" class="link" tabindex="-1">Story</a>
+									</paper-tab>
+									<paper-tab link>
+										<a href="/vision" class="link" tabindex="-1">Vision</a>
+									</paper-tab>
+									<paper-tab link>
+										<a href="/team" class="link" tabindex="-1">Team</a>
+									</paper-tab>
+								</paper-tabs>
+							</div>
+							<div class="flex-1 signup">
+								<a href$="[[signUpUrl]]" target="_blank">
+									<paper-button id="btnSignup" raised>GET INVOLVED</paper-button>
+								</a>
+							</div>
+						</div>
+					</app-toolbar>
+				</app-header>
+				<iron-pages role="main" selected="[[page]]" attr-for-selected="name">
+					<my-main name="main"></my-main>
+					<my-about name="about"></my-about>
+					<my-story name="story"></my-story>
+					<my-vision name="vision"></my-vision>
+					<my-team name="team"></my-team>
+					<my-philosophy name="philosophy"></my-philosophy>
+					<my-audience name="audience"></my-audience>
+				</iron-pages>
+				<a-footer section-links='[
+             {"name":"PROJECT","items":[{"name":"About","url":"/about"},{"name":"Philosophy","url":"/philosophy"},{"name":"Target Audience","url":"/audience"},{"name":"Approach","url":"#"},{"name":"Story","url":"/story"}]},
+             {"name":"TOOLS","items":[{"name":"Element Browser","url":"http://atom-project.io/elements/","newWindow":true},{"name":"Form Builder","url":"http://atom-project.io/create/form","newWindow":true},{"name":"Page Builder","url":"http://atom-project.io/create/page","newWindow":true},{"name":"Data Sources","url":"#"},{"name":"Element Builder","url":"#"}]},
+             {"name":"COMMUNITY","items":[{"name":"Team","url":"/team"},{"name":"Contribute","url":"#"},{"name":"Students &amp; Edu","url":"#"}]},
+             {"name":"EXPERIMENTS","items":[{"name":"Vision","url":"/vision"},{"name":"IOT","url":"#"},{"name":"Sample Apps","url":"#"}]},
+             {"name":"CONTACT","items":[{"name":"Interest Form","url":"#","newWindow":true},{"name":"Email","url":"mailto:chhibberparitosh@gmail.com"},{"name":"+91 9921089869","url":"tel:+919921089869"}]}]'
+					copyright-text=""></a-footer>
+			</app-header-layout>
+		</app-drawer-layout>
+		<iron-media-query query="min-width: 1024px" query-matches="{{wideLayout}}"></iron-media-query>
+
+	</template>
+
+	<script>
+
+    Polymer({
+
+      is: 'my-app',
+
+      properties: {
+
+        page: {
+          type: String,
+          reflectToAttribute: true,
+          observer: '_pageChanged'
+        },
+        signUpUrl:{
+          type:String,
+          value:"#"
+        },
+		selected:{
+          type:String
+        }
+      },
+
+      observers: [
+        '_routePageChanged(routeData.page)'
+      ],
+
+      _routePageChanged: function(page) {
+	    this.page = page || 'main';
+		var menuPages=['about','story','vision','team'];
+		this.selected=menuPages.indexOf(page);
+	  },
+
+      _pageChanged: function(page) {
+        this.importHref(
+          this.resolveUrl('my-' + page + '.html'), null, null, true);
+	  }
+    });
+
+  </script>
+
+</dom-module>

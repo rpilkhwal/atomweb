@@ -1,0 +1,111 @@
+<link rel="import" href="../elements.html">
+
+<dom-module id="a-contribute">
+
+	<template>
+		<style include="app-grid-style">
+			:host {
+				--app-grid-columns: 2;
+				--app-grid-gutter: 50px;
+				color: #656565;
+				--app-grid-expandible-item-columns: 2;
+			}
+			
+			section {
+				margin-top: 0;
+				background-image: url('/images/triangle.jpg');
+				background-size: cover;
+				background-repeat: no-repeat;
+				color: #FFF;
+				font-size: 30px;
+				font-weight: 300;
+				padding: 20px 10px 50px 10px;
+			}
+			
+			.action {
+				text-align: center;
+			}
+
+			.action a{
+				text-decoration:none;
+			}
+			
+			.action paper-button {
+				background-color: #FFCA3B;
+				color: #222222;
+				padding: 15px;
+			}
+			
+			.container {
+				padding-top: 0;
+			}
+			
+			.container div {
+				padding: 0 50px;
+			}
+			
+			h2 {
+				font-size: 60px;
+				font-weight: 300;
+				color: #FFCA3B;
+				text-align: center;
+			}
+			
+			p {
+				font-size: 24px;
+			}
+			
+			@media (max-width: 1024px) {
+				.app-grid div {
+					@apply(--app-grid-expandible-item);
+				}
+				h2 {
+					font-size: 40px;
+				}
+				.action paper-button {
+					padding: 10px;
+				}
+			}
+			
+			@media (max-width: 640px) {
+				.container div{
+					padding:10px;
+				}
+			}
+		</style>
+
+		<section>
+			<h2>Contribute your talent</h2>
+			<div class="container app-grid">
+				<div>
+					<p>Calling all people who are passionate about creating digital experiences.</p>
+					<p>- Front end developers</p>
+					<p>- UX &amp; Visual Designers</p>
+					<p>- DIY enthusiasts- Marketers</p>
+					<p>- Content &amp; Tech Writers</p>
+					<p>- Digital agency heads</p>
+					<p>- You! Role doesn’t matter. Intent does.</p>
+				</div>
+				<div>
+					<p>A special call to all institutions for design and technology learning</p>
+					<p>- Students</p>
+					<p>- Educators</p>
+					<p>- Maker/ Inventor Clubs</p>
+				</div>
+			</div>
+			<div class="action">
+				<a href="#">
+					<paper-button class="btnMore" raised>GET INVOLVED</paper-button>
+				</a>
+			</div>
+		</section>
+	</template>
+	<script>
+
+    Polymer({
+      is: 'a-contribute'
+    });
+
+  </script>
+
+</dom-module>

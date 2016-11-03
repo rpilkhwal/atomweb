@@ -1,0 +1,130 @@
+<link rel="import" href="../elements.html">
+
+<dom-module id="a-tools">
+
+	<template>
+		<style include="app-grid-style">
+			:host {
+				--intro-background-color: #fff;
+				--app-grid-columns: 3;
+				--app-grid-gutter: 20px;
+				text-align: center;
+				color: #656565;
+				--app-grid-expandible-item-columns: 3;
+			}
+			
+			section {
+				margin-top: 0;
+				background-color: var(--intro-background-color);
+				font-weight: 300;
+				padding: 80px 0;
+			}
+			
+			h2 {
+				font-size: 60px;
+				font-weight: 300;
+				color: #07c5f2;
+				padding-bottom: 20px;
+				margin: 0;
+			}
+			
+			p {
+				font-size: 24px;
+				min-height: 320px;
+			}
+			
+			.tools img {
+				width: 80%;
+				padding: 10px;
+			}
+			
+			.tools h3 {
+				font-size: 30px;
+				font-weight: 300;
+			}
+			
+			.btnMore {
+				background-color: #00CEF3;
+				color: white;
+				width: 100px;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			@media (max-width: 1024px) {
+				.app-grid div {
+					@apply(--app-grid-expandible-item);
+				}
+				.tools div {
+					padding-top: 40px;
+				}
+				.tools img {
+					width: 50%;
+					padding: 10px;
+				}
+				p {
+					min-height: 50px;
+				}
+			}
+			
+			@media (max-width: 640px) {
+				.tools img {
+					width: 80%;
+					padding: 10px;
+				}
+			}
+		</style>
+
+		<section>
+			<h2>Tools to begin with</h2>
+			<div class="tools app-grid">
+				<div>
+					<img src="/images/InteractiveDocumentation.png" />
+					<h3>Interactive Documentation</h3>
+					<p>The atom elements browser is an interactive documentation system for web components. For any web component, it automatically
+						generates a panel using which the user can interact with the public properties, methods and events and styles. This
+						documentation portal can be set up simply using a CLI.</p>
+					<a href="#">
+						<paper-button class="btnMore" raised>MORE</paper-button>
+					</a>
+				</div>
+				<div>
+					<img src="/images/FormBuilder.png" />
+					<h3>Form Builder</h3>
+					<p>Use the form builder to create amazing forms in seconds by dragging and dropping elements. The form builder is designed
+						to create forms used in web applications, not surveys. Customise all important aspects of forms like labels, inputs,
+						actions, error messages and more.</p>
+					<a href="#">
+						<paper-button class="btnMore" raised>MORE</paper-button>
+					</a>
+				</div>
+				<div>
+					<img src="/images/PageBuilder.png" />
+					<h3>Page Builder</h3>
+					<p>Provides a simple mechanism for creating responsive layouts using web components. Use our elements to get started or
+						add any polymer element you want. You can also preview, download or share your designs without the need to sign up.
+					</p>
+					<a href="#">
+						<paper-button class="btnMore" raised>MORE</paper-button>
+					</a>
+				</div>
+			</div>
+		</section>
+	</template>
+	<script>
+
+    Polymer({
+      is: 'a-tools',
+      properties:{
+        signUpUrl:{
+          type:String,
+          value:""
+        },
+      }
+    });
+
+  </script>
+
+</dom-module>
