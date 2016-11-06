@@ -7,7 +7,13 @@
     "src/my-vision.html",
     "src/my-team.html",
     "src/my-philosophy",
-    "src/my-audience"
+    "src/my-audience",
+    "src/my-contribute",
+    "src/my-studentsneducation",
+    "src/mysample",
+    "src/my-approach",
+    "src/my-team",
+    "src/my-vision"
   ],
   "sourceGlobs": [
    "src/**/*",

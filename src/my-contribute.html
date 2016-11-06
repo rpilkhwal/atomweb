@@ -1,0 +1,129 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="my-contribute">
+
+	<template>
+
+		<style>
+			:host {
+				display: block;
+				padding: 10px;
+				text-align: center;
+			}
+			
+			div {
+				width: 700px;
+				font-size: 24px;
+				font-weight: 300;
+				text-align: left;
+				margin: auto;
+				padding: 45px 0;
+				line-height: 40px;
+				opacity: 0.87;
+			}
+			
+			h1 {
+				padding-top: 20px;
+				line-height: 60px;
+			}
+			
+			h2 {
+				padding-top: 10px;
+				line-height: 40px;
+			}
+			
+			h1,
+			h2 {
+				opacity: 0.87;
+			}
+			
+			ul {
+				text-align: left;
+			}
+			
+			@media (max-width: 1024px) {
+				div {
+					width: 80%;
+				}
+			}
+		</style>
+		<div>
+			<p>
+				Successfully building a community around an open source initiative is a tall order. We are getting there, fast, with your
+				help. As a contributor, there are a plethora of areas where your talent can make a difference. You could contribute to —
+			</p>
+
+			<h2>Technology</h2>
+
+		<ul>
+			<li>Develop Modules</li>
+			<li>Integrate with external systems (an online code editor, web based free form design tool, api design &amp; development
+				tool)
+			</li>
+			<li>Improve test case coverage and automation</li>
+			<li>Create components (or refactor existing ones to make them simpler, more performant and robust)</li>
+		</ul>
+		<h2>
+			Design
+		</h2>
+		<ul>
+			<li>User research (activities like contextual inquiry, setting up analytics, surveys, analogous systems analysis)</li>
+			<li>Model system usage (artefacts like personas, scenarios, user goals) </li>
+			<li>Suggest improvements to the workflow (artefacts like workflow/ information flow diagrams)</li>
+			<li>Create specifications for modules (artefacts like wireframes, visual designs, or other forms of prototypes)</li>
+			<li>Validate designs &amp; test with users! (artefacts like reports coming out of heuristic evaluation, user testing, A/B
+				testing, heat map testing)</li>
+		</ul>
+		<h2>
+			Research
+		</h2>
+		<ul>
+			<li>System analysis</li>
+		</ul>
+
+		<h2>
+			Communications
+		</h2>
+		<ul>
+			<li>Create content like blogs, presentations, videos</li>
+			<li>Leverage digital marketing to spread the word</li>
+		</ul>
+		<h2>
+			Community Development
+		</h2>
+		<ul>
+			<li>Build strategic partnerships</li>
+			<li>Involve your organisation</li>
+			<li>Share success stories about yourself, your team or organisation</li>
+		</ul>
+		<h2>
+			Legal &amp; Advisory
+		</h2>
+		<ul>
+			<li>Counsel on open source project development</li>
+			<li>We are looking for industry veterans and senior academics to join us as advisors</li>
+		</ul>
+		</div>
+	</template>
+
+	<script>
+
+    Polymer({
+
+      is: 'my-contribute'
+
+    });
+
+  </script>
+
+</dom-module>

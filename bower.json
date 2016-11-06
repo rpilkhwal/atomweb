@@ -1,5 +1,6 @@
 {
   "name": "atom-project",
+  "version": "0.1.0",
   "authors": [
     "atom-project authors"
   ],
